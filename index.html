@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CodeFlow</h1>
+            <p>Understand the algorithms by visualizing</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="algorithm">Algorithm:</label>
+                    <select id="algorithm">
+                        <option value="bubbleSort">Bubble Sort</option>
+                        <option value="selectionSort">Selection Sort</option>
+                        <option value="insertionSort">Insertion Sort</option>
+                        <option value="linearSearch">Linear Search</option>
+                        <option value="binarySearch">Binary Search</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="speed">Speed:</label>
+                    <input type="range" id="speed" min="1" max="10" value="3">
+                </div>
+
+                <div class="control-group">
+                    <label for="arraySize">Size:</label>
+                    <input type="range" id="arraySize" min="5" max="12" value="8">
+                </div>
+            </div>
+            <div class="control-row">
+                <button id="generateArray">New Array</button>
+                <button id="start">Start Visualization</button>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <div id="array-container"></div>
+            <div id="info-panel">
+                <div class="info-row">
+                    <p id="algorithm-info">Pick an algorithm</p>
+                    <p id="step-counter">Steps: 0</p>
+                    <p id="comparison-counter">Comparisons: 0</p>
+                </div>
+                <div id="comment-box">Ready when you are</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
